@@ -10,7 +10,7 @@ dotenv.config()
 
 const CONNECTION_URL = process.env.CONNECTION_URL
 
-mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
+mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
     .then(() => console.log('connected to MongoDB'))
     .catch((error) => {
         console.log('can\'t connect to MongoDB')
