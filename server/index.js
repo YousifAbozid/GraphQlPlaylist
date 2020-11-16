@@ -3,6 +3,7 @@ const require = createRequire(import.meta.url);
 import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
+import cors from 'cors'
 const { graphqlHTTP } = require('express-graphql')
 import schema from './models/schema.js'
 
@@ -18,6 +19,8 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
     })
 
 const app = express()
+
+app.use(cors())
 
 app.use('/graphql', graphqlHTTP({
     schema,
