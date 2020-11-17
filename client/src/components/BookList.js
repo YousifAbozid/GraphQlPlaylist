@@ -4,6 +4,7 @@ import { getBooksQuery } from '../queryies/queries'
 
 const BookList = () => {
     const { loading, error, data } = useQuery(getBooksQuery)
+    
     if (loading) return <div>Loading books...</div>
     if (error) return <div>Error while fetching data :(</div>
 
