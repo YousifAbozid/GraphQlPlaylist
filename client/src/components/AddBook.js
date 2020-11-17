@@ -23,6 +23,12 @@ const AddBook = () => {
             },
             refetchQueries: [{ query: getBooksQuery }]
         })
+        .then(() => {
+            setBookName('')
+            setBookgenre('')
+            setAuthorId('')
+        })
+        .catch((error) => console.log(error.message))
     }
 
     return (
