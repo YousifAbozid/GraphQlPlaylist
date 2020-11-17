@@ -24,6 +24,10 @@ const BookDetails = ({ bookId }) => {
                     </ul>
                 </div>
             )
+        } else {
+            return (
+                <div>Select a book to show it's info.</div>
+            )
         }
     }
 

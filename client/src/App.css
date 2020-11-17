@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(238, 238, 238);
+  background-color: #caa8c9;
   font-family: cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,7 +14,7 @@ body {
   padding: 0px;
   box-sizing: border-box;
   width: 60%;
-  height: 100%;
+  height: fit-content;
 }
 
 #book-list {
@@ -38,7 +38,7 @@ form {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 400px;
+  width: fit-content;
 }
 
 form .field {
